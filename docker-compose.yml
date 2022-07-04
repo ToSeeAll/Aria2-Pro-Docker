@@ -5,18 +5,7 @@ services:
   Aria2-Pro:
     container_name: aria2-pro
     image: p3terx/aria2-pro
-    environment:
-      - PUID=65534
-      - PGID=65534
-      - UMASK_SET=022
-      - RPC_SECRET=P3TERX
-      - RPC_PORT=6800
-      - LISTEN_PORT=6888
-      - DISK_CACHE=64M
-      - IPV6_MODE=false
-      - UPDATE_TRACKERS=true
-      - CUSTOM_TRACKER_URL=
-      - TZ=Asia/Shanghai
+
     volumes:
       - ${PWD}/aria2-config:/config
       - ${PWD}/aria2-downloads:/downloads
